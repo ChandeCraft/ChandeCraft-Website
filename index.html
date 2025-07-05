@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChandeCraft</title>
+  <link rel="icon" href="ChandeCraft.ico" type="image/x-icon">
   <style>
     body {
       margin: 0;
@@ -63,6 +64,35 @@
     <br>Enter... if you dare.
   </p>
   <a href="https://discord.gg/YOUR_LINK_HERE" class="button">Join the Discord</a>
+<script>
+  // Check if the site was accessed via play.chandecraft.com
+  if (window.location.hostname === "play.chandecraft.com") {
+    const modal = document.createElement("div");
+    modal.style = `
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.85);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+    `;
+
+    modal.innerHTML = `
+      <div style="background: #1e1e1e; padding: 2rem 3rem; border-radius: 1rem; color: #fff; max-width: 500px; text-align: center; box-shadow: 0 0 20px #00ff88;">
+        <h2 style="margin-bottom: 1rem;">🧠 Uh-oh, lost in the browser dimension?</h2>
+        <p style="margin-bottom: 1rem;">Looks like you typed <strong>play.chandecraft.com</strong> in a web browser. Sweetie... that's for <i>Minecraft</i> 😅</p>
+        <p style="margin-bottom: 1.5rem;">Paste that into your server list in-game. Not here. Duh.</p>
+        <button onclick="document.body.removeChild(this.parentElement.parentElement)"
+                style="padding: 0.5rem 1.2rem; background: #00ff88; color: #000; border: none; border-radius: 8px; cursor: pointer;">
+          Got it 💀
+        </button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
+</script>
 
   <footer>
     © 2025 ChandeCraft. All glitches reserved.
