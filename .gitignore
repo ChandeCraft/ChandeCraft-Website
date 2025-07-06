@@ -1,0 +1,27 @@
+# 💻 OS garbage
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 🧠 Editor nonsense
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 🗂️ Git conflict leftovers
+*.orig
+*.rej
+
+# 📄 Backup files
+*~
+*.bak
+*.tmp
+
+# 👻 If you ever decide to get fancy later (uncomment if needed)
+# dist/
+# build/
+# out/
+# node_modules/
+# .env
+# .cache/
